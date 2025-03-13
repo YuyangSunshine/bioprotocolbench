@@ -137,11 +137,11 @@ from bioprotocolbench import load_dataset
 
 ## 📜 Citation
 ```bibtex
-@misc{bioprotocolbench2024,
-  title={BioProtocolBench: Benchmarking Biological Protocol Understanding in AI Systems},
-  author={Your Name et al.},
+@misc{bioprotocolbench2025,
+  title={BioProtocolBench: A Benchmark for Biological Protocol Understanding and Reasoning},
+  author={Name et al.},
   year={2025},
-  url={https://github.com/yourusername/bioprotocolbench}
+  url={https://github.com/YuyangSunshine/bioprotocolbench/}
 }
 ```
 
