@@ -1,5 +1,4 @@
-# BioProtocolBench 🧪
-**A Benchmark for Biological Protocol Understanding and Reasoning**
+# BioProtocolBench 🧪: A Benchmark for Biological Protocol Understanding and Reasoning
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/bioprotocolbench/pulls)
