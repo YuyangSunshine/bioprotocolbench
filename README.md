@@ -10,11 +10,11 @@
 ## 🌟 Overview
 Biological protocols form the experimental bedrock of life science research. With the advent of high-throughput automation and AI-driven experimentation, there exists a critical need to develop models capable of **deep protocol understanding** and **experimental reasoning**. BioProtocolBench addresses this gap by providing:
 - 📚 **20,000+ curated protocols** from 5 major biological protocol repositories：
-  - Protocol.io
-  - Nature Protocols
-  - Bio-protocol
-  - JOVE
-  - Addgene
+  - [Protocol-exchange](https://protocolexchange.researchsquare.com/)
+  - [Nature Protocols](https://www.nature.com/nprot/)
+  - [Bio-protocol](https://bio-protocol.org/en)
+  - [JOVE](https://www.jove.com/)
+  - [MorimotoLab](https://www.morimotolab.org)
 - 🎯 **5 core tasks** spanning text generation to complex reasoning：
   - Protocol Generation (GEN)
   - Protocol QA (QA)
