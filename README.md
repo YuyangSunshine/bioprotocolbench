@@ -52,7 +52,8 @@ bioprotocolbench/
 │   └── reasoning/
 ├── domains/             # 16 biological subdomains
 ├── evaluation/          # Evaluation metrics & scripts
-└── protocol_db/         # Raw protocol collection
+├── protocol_db/         # Raw protocol collection
+└── utils/               # Some utils files
 ```
 
 ---
@@ -62,7 +63,7 @@ bioprotocolbench/
 - Input: Experimental objective + constraints
 - Output: Valid protocol steps
 - Example:
-```
+```markdown
 Input: 
   Objective: Purify GFP-tagged protein from E. coli lysate
   Constraints: Use affinity chromatography, avoid expensive reagents
@@ -76,7 +77,7 @@ Output:
 - Input: Experimental objective + constraints
 - Output: Valid protocol steps
 - Example:
-```
+```markdown
 Input: 
   Which step ensures RNase-free conditions in RNA extraction?
   A) Ethanol precipitation  
@@ -117,6 +118,10 @@ A TABLE
 
 ## 💻 Getting Started
 Some example
+```python
+from bioprotocolbench import load_dataset
+
+```
 
 ---
 
@@ -131,7 +136,7 @@ Some example
 ---
 
 ## 📜 Citation
-```
+```bibtex
 @misc{bioprotocolbench2024,
   title={BioProtocolBench: Benchmarking Biological Protocol Understanding in AI Systems},
   author={Your Name et al.},
