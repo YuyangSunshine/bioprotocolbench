@@ -75,7 +75,7 @@ def evaluate_predictions(output_file_path):
     total = 0
 
     for item in tqdm(data, desc="Evaluating"):
-        for qa in item['QA']:
+        for qa in item['Samples']:
             total += 1
             generated_str = qa['generated_response']
             try:
