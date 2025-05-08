@@ -46,7 +46,7 @@ def evaluate_step_reasoning_model(result_path):
     fail_rate = failed / total * 100 if total > 0 else 0
 
     return {
-        "LLM_Judge_Accuracy": acc,
+        "Consistency": acc,
         "Failure_Rate": fail_rate,
         "Total": total,
         "Failed": failed,
