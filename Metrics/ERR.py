@@ -61,7 +61,7 @@ def evaluate_correction_task(output_file_path):
         data = json.load(f)
 
     for item in tqdm(data, desc="Evaluating"):
-        for qa in item['QA']:
+        for qa in item['Samples']:
             total += 1
             try:
                 pred = extract_binary_answer(qa["generated_response"])
