@@ -117,11 +117,68 @@ A TABLE
 ---
 
 ## 💻 Getting Started
-Some example
+
+### 📦 Dataset Loading
+
 ```python
 from bioprotocolbench import load_dataset
 
+dataset = load_dataset("ProtocolGen")
+print(dataset[0])
 ```
+
+---
+
+### 🧪 Evaluation Metrics
+
+Each task in **BioProtocolBench** includes a standalone evaluation script. To evaluate your model outputs:
+
+#### ✅ Step 1: Locate the evaluation file
+
+Each task corresponds to one script:
+
+| Task                         | Script       | Metrics     |
+| ---------------------------- | ------------ |------------ |
+| Protocol Generation (GEN)    | `GEN.py`     |BLEU, Keyword-based, Embedding-based, etc. |
+| Protocol QA (PQA)            | `PQA.py`     |Accuracy, Brier Score, etc. |
+| Error Correction (ERR)       | `ERR.py`     |Accuracy, Precision, Recall, F1, etc. |
+| Step Ordering (ORD)          | `ORD.py`     |Exact Match, Kendall's tau, etc. |
+| Experimental Reasoning (REA) | `REA-ERR.py` |Accuracy, Precision, Recall, F1, Consistency, etc. |
+
+
+#### ✏️ Step 2: Modify the script
+
+Open the corresponding evaluation script (e.g., `ERR.py`) and **manually set** the file path to your model’s output JSON file:
+
+```python
+# Inside ERR.py
+
+def main():
+    output_file_path = "/absolute/path/to/LLM_output_file.json"  # ← Replace this!
+    ...
+```
+
+Example:
+
+```python
+output_file_path = "./ErrorCorrection_Benchmark_gpt-4o.json"
+```
+
+Then run the script:
+
+```bash
+python ERR.py
+```
+
+
+#### 🧪 Output Metrics
+
+Each script prints evaluation results such as:
+
+* Accuracy, Precision, Recall, F1
+* Step-level metrics (e.g., Step Recall, Redundancy Penalty)
+* Ordering metrics (e.g., Kendall’s Tau)
+* Parsing failure rates
 
 ---
 
