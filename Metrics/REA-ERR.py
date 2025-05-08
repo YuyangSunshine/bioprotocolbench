@@ -32,7 +32,7 @@ def evaluate_step_reasoning_model(result_path):
         data = json.load(f)
 
     for item in tqdm(data, desc="Evaluating Step Reasoning"):
-        for qa in item['QA']:
+        for qa in item['Samples']:
             if "LLM_judge" in qa:
                 total += 1
                 try:
