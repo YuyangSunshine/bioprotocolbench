@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/252d8212-722b-46ec-97b9-b72f4ae3c4bf" alt="BioProBench Logo" width="400"/>
+  <img src="https://github.com/YuyangSunshine/bioprotocolbench/logo-v3.png?raw=true" alt="BioProBench Logo" width="400"/>
 </div>
 
 
