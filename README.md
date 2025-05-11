@@ -1,61 +1,74 @@
 ![logo-v2](https://github.com/user-attachments/assets/252d8212-722b-46ec-97b9-b72f4ae3c4bf)
 
 
-# BioProBench: A Comprehensive Dataset and Benchmark for LLMs in Biological Protocol Understanding and Reasoning
+# BioProBench: Comprehensive Dataset and Benchmark in Biological Protocol Understanding and Reasoning
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/bioprotocolbench/pulls)
 
-**To our knowledge, BioProBench is the first large-scale, integrated multi-task benchmark for biological protocol understanding and reasoning, encompassing not only question answering but also step ordering, error correction, protocol generation and structured reasoning.**
+**BioProBench is the first large-scale, integrated multi-task benchmark for biological protocol understanding and reasoning, specifically designed for large language models (LLMs). It moves beyond simple QA to encompass a comprehensive suite of tasks critical for procedural text comprehension.**
 
 ---
 
-## 🌟 Overview
-Biological protocols form the experimental bedrock of life science research. With the advent of high-throughput automation and AI-driven experimentation, there exists a critical need to develop models capable of **deep protocol understanding** and **experimental reasoning**. BioProtocolBench addresses this gap by providing:
-- 📚 **27K curated protocols** from 6 major biological protocol repositories：
-  - [Protocol.io](https://www.protocols.io/)
-  - [Protocol-exchange](https://protocolexchange.researchsquare.com/)
-  - [Nature Protocols](https://www.nature.com/nprot/)
-  - [Bio-protocol](https://bio-protocol.org/en)
-  - [JOVE](https://www.jove.com/)
-  - [MorimotoLab](https://www.morimotolab.org)
-- 🎯 **5 core tasks** spanning text generation to complex reasoning：
-  - Protocol QA (QA)
-  - Step Ordering (ORD)
-  - Error Correction (ERR)
-  - Protocol Generation (GEN)
-  - Experimental Reasoning (REA)
-- 🧬 **16 biological subdomains** covering cutting-edge methodologies
-- 🔬 **Standardized evaluation framework** for protocol-aware AI systems
+Biological protocols are the fundamental bedrock of reproducible and safe life science research. While LLMs have shown remarkable capabilities on general tasks, their systematic evaluation on highly specialized, accuracy-critical, and inherently procedural texts like biological protocols remains limited. BioProBench fills this gap by providing a robust framework to evaluate LLMs on diverse aspects of protocol understanding and reasoning.
+
+BioProBench features:
+
+* 📚 **Large-scale Data:** Built upon **27K original biological protocols**, yielding nearly **556K high-quality structured instances**.
+* 🎯 **Comprehensive Tasks:** A suite of ** five core tasks** challenging LLMs on different facets of procedural understanding and generation:
+    * Protocol Question Answering (PQA)
+    * Step Ordering (ORD)
+    * Error Correction (ERR)
+    * Protocol Generation (GEN)
+    * Protocol Reasoning (REA)
+* 🧬 **Broad Domain Coverage:** Data sourced from 6 major repositories and covering **16 biological subdomains**.
+* 🔬 **Standardized Evaluation:** A robust framework combining standard NLP metrics with novel domain-specific measures for accurate performance quantification.
   
 ---
 
 ## 🚀 Motivation
-Biological protocols represent the **operational DNA** of experimental science. While biological research increasingly adopts automated workflows (e.g., lab robotics, AI-guided experimentation), current systems exhibit fundamental limitations:
-1. **Protocol Comprehension Gap**: Existing LLMs show <40% accuracy on protocol reasoning tasks
-2. **Domain Adaptation Challenge**: Biomedical LLMs fail to capture protocol-specific temporal/logical dependencies
-3. **Innovation Bottleneck**: 89% of automated systems rely on fixed protocols without adaptive optimization
+
+Biological protocols are the operational blueprint for experiments. As biological research increasingly leverages automation and AI, the ability of AI systems to understand and reason about these complex procedures is paramount. Current LLMs, while powerful, face significant challenges:
+
+* **Limited Procedural Understanding:** LLMs struggle with the temporal dependencies, conditional logic, and specific requirements embedded within protocols.
+* **Lack of Systematic Evaluation:** There has been a lack of large-scale, multi-task benchmarks specifically designed to diagnose LLMs' limitations on procedural biological texts.
+* **Bridging the Gap:** Developing AI systems capable of safely automating and even optimizing experiments requires models that can reliably interpret and generate protocols.
+
+BioProBench addresses these challenges by providing the necessary data and tasks for comprehensive evaluation and driving the development of more capable models.
 
 ---
 
 ## 📊 Dataset Structure
-### Core Components
+
+BioProBench provides a layered data design to support various model development stages:
+
+* A raw corpus of **27K protocols** for pretraining or RAG applications.
+* A substantial downstream **training set of over 550K structured instances** across the five fine-grained tasks for model adaptation.
+* A held-out **test set of 1,000 examples per task** for standardized benchmarking.
+
+The dataset and code are publicly available:
+
+* **Code Repository:** [https://github.com/YuyangSunshine/bioprotocolbench](https://github.com/YuyangSunshine/bioprotocolbench/)
+* **Hugging Face Dataset:** [https://huggingface.co/datasets/GreatCaptainNemo/BioProBench](https://huggingface.co/datasets/GreatCaptainNemo/BioProBench)
+
 ```bash
 bioprotocolbench/
-├── Metrics/               # Evaluation metrics & scripts
-│   ├── text_generation/
-│   ├── qa_multichoice/
-│   ├── step_ordering/
-│   ├── error_correction/
-│   └── reasoning/
-└── readme              
+├── Metrics/           # Evaluation metrics & scripts
+│   ├── GEN.py
+│   ├── PQA.py
+│   ├── ORD.py
+│   ├── ERR.py
+│   └── REA.py
+└── readme # This README file
 ```
 
 ---
 
 ### 🧪 Evaluation Metrics
 
-Each task in **BioProtocolBench** includes a standalone evaluation script. To evaluate your model outputs:
+We employ a hybrid evaluation framework that combines standard NLP metrics with novel domain-specific measures to accurately quantify model performance across all tasks.
+
+Each task in BioProBench includes a standalone evaluation script within the Metrics/ directory. To evaluate your model outputs:
 
 #### ✅ Step 1: Locate the evaluation file
 
@@ -106,9 +119,19 @@ Each script prints evaluation results such as:
 
 ---
 
-## 🤝 Contributing
-- We welcome contributions through:
+#### 🔬 Key Findings
+We evaluated 12 mainstream open-source and closed-source LLMs on BioProBench. Our key findings reveal significant insights into the current capabilities and limitations of LLMs on biological protocols:
 
+* Surface vs. Deep Understanding: While top models perform reasonably well on tasks requiring surface understanding like Protocol Question Answering (e.g., ~70% PQA-Acc.) and Error Correction (e.g., >64% ERR F1), they struggle significantly with tasks demanding deeper procedural understanding and structured generation.
+* Challenges in Reasoning and Generation: Performance drops considerably on Step Ordering (e.g., ORD-EM ~50%) and Protocol Generation (e.g., GEN-BLEU <15%), highlighting the difficulty for LLMs in managing temporal dependencies and generating coherent, accurate procedures.
+* Model Variances: Comparisons show diverse performance across models. Certain open-source models approach the performance of closed-source models on some tasks, while smaller, bio-specific models often lag behind general LLMs on complex procedural content, suggesting limitations in capacity for capturing intricate dependencies.
+
+Overall, our findings underscore that robust procedural reasoning within biological protocols represents a significant challenge for current LLMs.
+
+---
+
+## 🤝 Contributing
+We welcome contributions to enhance BioProBench, including:
   - New protocol sources
   - 🧪 Additional biological domains
   - 🧠 Novel evaluation tasks
