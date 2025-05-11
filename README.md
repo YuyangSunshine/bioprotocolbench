@@ -5,7 +5,7 @@
 
 # BioProBench: Comprehensive Dataset and Benchmark in Biological Protocol Understanding and Reasoning
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/bioprotocolbench/pulls)
 
 **BioProBench is the first large-scale, integrated multi-task benchmark for biological protocol understanding and reasoning, specifically designed for large language models (LLMs). It moves beyond simple QA to encompass a comprehensive suite of tasks critical for procedural text comprehension.**
