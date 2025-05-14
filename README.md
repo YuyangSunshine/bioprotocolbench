@@ -53,17 +53,6 @@ The dataset and code are publicly available:
 * **Code Repository:** [https://github.com/YuyangSunshine/bioprotocolbench](https://github.com/YuyangSunshine/bioprotocolbench/)
 * **Hugging Face Dataset:** [https://huggingface.co/datasets/GreatCaptainNemo/BioProBench](https://huggingface.co/BioProBench)
 
-```bash
-bioprotocolbench/
-├── Metrics/           # Evaluation metrics & scripts
-│   ├── GEN.py
-│   ├── PQA.py
-│   ├── ORD.py
-│   ├── ERR.py
-│   └── REA.py
-└── readme # This README file
-```
-
 ---
 
 ### 🧪 Evaluation Metrics
