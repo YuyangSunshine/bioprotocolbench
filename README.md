@@ -51,7 +51,7 @@ BioProBench provides a layered data design to support various model development 
 The dataset and code are publicly available:
 
 * **Code Repository:** [https://github.com/YuyangSunshine/bioprotocolbench](https://github.com/YuyangSunshine/bioprotocolbench/)
-* **Hugging Face Dataset:** [https://huggingface.co/datasets/GreatCaptainNemo/BioProBench](https://huggingface.co/datasets/GreatCaptainNemo/BioProBench)
+* **Hugging Face Dataset:** [https://huggingface.co/datasets/GreatCaptainNemo/BioProBench](https://huggingface.co/BioProBench)
 
 ```bash
 bioprotocolbench/
@@ -144,10 +144,10 @@ We welcome contributions to enhance BioProBench, including:
 ## 📜 Citation
 ```bibtex
 @misc{bioprotocolbench2025,
-  title={BioProtocolBench: A Benchmark for Biological Protocol Understanding and Reasoning},
-  author={Name et al.},
+  title={BioProBench: Comprehensive Dataset and Benchmark in Biological Protocol Understanding and Reasoning},
+  author={Yuyang Liu⋆, Liuzhenghao Lv⋆ Xiancheng Zhang, Li Yuan1, Yonghong Tian.},
   year={2025},
-  url={https://github.com/YuyangSunshine/bioprotocolbench/}
+  url={https://arxiv.org/pdf/2505.07889}
 }
 ```
 
