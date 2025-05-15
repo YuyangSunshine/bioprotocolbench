@@ -103,14 +103,13 @@ def evaluate_sorting_predictions(output_file_path):
     failed, total = 0, 0
 
     for item in tqdm(data, desc="Evaluating"):
-        for qa in item["Samples"]:
-            total += 1
-            try:
-                pr, gt = extract_predicted_order(qa["generated_response"], qa["wrong_steps"], qa["correct_steps"])
-                preds.append(pr)
-                gts.append(gt)
-            except Exception:
-                failed += 1
+        total += 1
+        try:
+            pr, gt = extract_predicted_order(item["generated_response"], item["wrong_steps"], item["correct_steps"])
+            preds.append(pr)
+            gts.append(gt)
+        except Exception:
+            failed += 1
 
     return preds, gts, failed, total
 
