@@ -61,15 +61,14 @@ def evaluate_correction_task(output_file_path):
         data = json.load(f)
 
     for item in tqdm(data, desc="Evaluating"):
-        for qa in item['Samples']:
-            total += 1
-            try:
-                pred = extract_binary_answer(qa["generated_response"])
-                gt = qa["is_correct"]
-                preds.append(pred)
-                gts.append(gt)
-            except Exception:
-                failed += 1
+        total += 1
+        try:
+            pred = extract_binary_answer(item["generated_response"])
+            gt = item["is_correct"]
+            preds.append(pred)
+            gts.append(gt)
+        except Exception:
+            failed += 1
 
     return preds, gts, failed, total
 
