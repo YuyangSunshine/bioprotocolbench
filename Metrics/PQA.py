@@ -75,13 +75,12 @@ def evaluate_predictions(output_file_path):
     total = 0
 
     for item in tqdm(data, desc="Evaluating"):
-        for qa in item['Samples']:
             total += 1
-            generated_str = qa['generated_response']
+            generated_str = item['generated_response']
             try:
                 answer, confidence = extract_answer_and_confidence(generated_str)
                 cfds.append(confidence)
-                accs.append(1 if answer == qa['answer'] else 0)
+                accs.append(1 if answer == item['answer'] else 0)
             except Exception:
                 failed += 1
 
