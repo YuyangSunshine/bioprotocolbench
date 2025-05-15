@@ -98,9 +98,8 @@ def evaluate_protocolgen_model(result_path):
     failed = 0
 
     for item in tqdm(json_list, desc="Evaluating"):
-        for qa in item['Samples']:
-            ref = qa['output']
-            gen = qa['generated_response']
+            ref = item['output']
+            gen = item['generated_response']
 
             if gen is None:
                 failed += 1
