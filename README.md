@@ -59,7 +59,7 @@ The dataset and code are publicly available:
 
 We employ a hybrid evaluation framework that combines standard NLP metrics with novel domain-specific measures to accurately quantify model performance across all tasks.
 
-Each task in BioProBench includes a standalone evaluation script within the Metrics/ directory. To evaluate your model outputs:
+Each task in BioProBench includes a standalone evaluation script within the **Metrics/** directory. To evaluate your model's outputs (Assert model's output is stored in 'generated_response' of each item of JSON file):
 
 #### ✅ Step 1: Locate the evaluation file
 
