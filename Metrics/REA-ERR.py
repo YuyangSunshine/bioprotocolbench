@@ -32,15 +32,14 @@ def evaluate_step_reasoning_model(result_path):
         data = json.load(f)
 
     for item in tqdm(data, desc="Evaluating Step Reasoning"):
-        for qa in item['Samples']:
-            if "LLM_judge" in qa:
-                total += 1
-                try:
-                    is_correct = extract_binary_answer(qa['LLM_judge'])
-                    llm_judge += int(is_correct)
-                except Exception:
-                    failed += 1
-                    continue
+        if "LLM_judge" in item:
+            total += 1
+            try:
+                is_correct = extract_binary_answer(item['LLM_judge'])
+                llm_judge += int(is_correct)
+            except Exception:
+                failed += 1
+                continue
 
     acc = llm_judge / (total - failed) * 100 if (total - failed) > 0 else 0
     fail_rate = failed / total * 100 if total > 0 else 0
