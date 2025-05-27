@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/logo-v3.png?raw=true" alt="BioProBench Logo" width="400"/>
+  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/figures/logo-v3.png?raw=true" alt="BioProBench Logo" width="400"/>
 </div>
 
 
@@ -16,7 +16,7 @@ Biological protocols are the fundamental bedrock of reproducible and safe life s
 
 BioProBench features:
 <div align="center">
-  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/logo-v3.png?raw=true" alt="BioProBench Logo" width="400"/>
+  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/figures/overview.jpg?raw=true" alt="BioProBench Logo" width="600"/>
 </div>
 
 
