@@ -16,7 +16,7 @@ Biological protocols are the fundamental bedrock of reproducible and safe life s
 
 BioProBench features:
 <div align="center">
-  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/figures/overview.png?raw=true" alt="BioProBench Logo" width="600"/>
+  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/figures/overview.png?raw=true" alt="BioProBench Logo" width="1000"/>
 </div>
 
 
@@ -39,7 +39,7 @@ Biological protocols are the operational blueprint for experiments. As biologica
 
 * **Limited Procedural Understanding:
 <div align="center">
-  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/figures/samples.jpg?raw=true" alt="BioProBench Logo" width="600"/>
+  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/figures/samples.jpg?raw=true" alt="BioProBench Logo" width="1000"/>
 </div>
 * ** LLMs struggle with the temporal dependencies, conditional logic, and specific requirements embedded within protocols.
 * **Lack of Systematic Evaluation:** There has been a lack of large-scale, multi-task benchmarks specifically designed to diagnose LLMs' limitations on procedural biological texts.
