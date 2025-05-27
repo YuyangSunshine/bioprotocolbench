@@ -15,9 +15,14 @@
 Biological protocols are the fundamental bedrock of reproducible and safe life science research. While LLMs have shown remarkable capabilities on general tasks, their systematic evaluation on highly specialized, accuracy-critical, and inherently procedural texts like biological protocols remains limited. BioProBench fills this gap by providing a robust framework to evaluate LLMs on diverse aspects of protocol understanding and reasoning.
 
 BioProBench features:
+<div align="center">
+  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/logo-v3.png?raw=true" alt="BioProBench Logo" width="400"/>
+</div>
+
 
 * 📚 **Large-scale Data:** Built upon **27K original biological protocols**, yielding nearly **556K high-quality structured instances**.
 * 🎯 **Comprehensive Tasks:** A suite of ** five core tasks** challenging LLMs on different facets of procedural understanding and generation:
+
     * Protocol Question Answering (PQA)
     * Step Ordering (ORD)
     * Error Correction (ERR)
@@ -32,7 +37,8 @@ BioProBench features:
 
 Biological protocols are the operational blueprint for experiments. As biological research increasingly leverages automation and AI, the ability of AI systems to understand and reason about these complex procedures is paramount. Current LLMs, while powerful, face significant challenges:
 
-* **Limited Procedural Understanding:** LLMs struggle with the temporal dependencies, conditional logic, and specific requirements embedded within protocols.
+* **Limited Procedural Understanding:** LLMs struggl![samples](https://github.com/user-attachments/assets/7f35af7e-0f6c-4edd-8953-ac2e43d0cb94)
+e with the temporal dependencies, conditional logic, and specific requirements embedded within protocols.
 * **Lack of Systematic Evaluation:** There has been a lack of large-scale, multi-task benchmarks specifically designed to diagnose LLMs' limitations on procedural biological texts.
 * **Bridging the Gap:** Developing AI systems capable of safely automating and even optimizing experiments requires models that can reliably interpret and generate protocols.
 
