@@ -36,14 +36,14 @@ BioProBench features:
 ## 🚀 Motivation
 
 Biological protocols are the operational blueprint for experiments. As biological research increasingly leverages automation and AI, the ability of AI systems to understand and reason about these complex procedures is paramount. Current LLMs, while powerful, face significant challenges:
-
-* **Limited Procedural Understanding:
 <div align="center">
   <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/figures/samples.jpg?raw=true" alt="BioProBench Logo" width="1000"/>
 </div>
-* ** LLMs struggle with the temporal dependencies, conditional logic, and specific requirements embedded within protocols.
-* **Lack of Systematic Evaluation:** There has been a lack of large-scale, multi-task benchmarks specifically designed to diagnose LLMs' limitations on procedural biological texts.
-* **Bridging the Gap:** Developing AI systems capable of safely automating and even optimizing experiments requires models that can reliably interpret and generate protocols.
+
+* Limited Procedural Understanding:
+* LLMs struggle with the temporal dependencies, conditional logic, and specific requirements embedded within protocols.
+* Lack of Systematic Evaluation: There has been a lack of large-scale, multi-task benchmarks specifically designed to diagnose LLMs' limitations on procedural biological texts.
+* Bridging the Gap: Developing AI systems capable of safely automating and even optimizing experiments requires models that can reliably interpret and generate protocols.
 
 BioProBench addresses these challenges by providing the necessary data and tasks for comprehensive evaluation and driving the development of more capable models.
 
