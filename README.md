@@ -16,12 +16,11 @@
 
 Biological protocols are the fundamental bedrock of reproducible and safe life science research. While LLMs have shown remarkable capabilities on general tasks, their systematic evaluation on highly specialized, accuracy-critical, and inherently procedural texts like biological protocols remains limited. BioProBench fills this gap by providing a robust framework to evaluate LLMs on diverse aspects of protocol understanding and reasoning.
 
-BioProBench features:
 <div align="center">
   <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/figures/overview.png?raw=true" alt="BioProBench Logo" width="1000"/>
 </div>
 
-
+BioProBench features:
 * 📚 **Large-scale Data:** Built upon **27K original biological protocols**, yielding nearly **556K high-quality structured instances**.
 * 🎯 **Comprehensive Tasks:** A suite of ** five core tasks** challenging LLMs on different facets of procedural understanding and generation:
 
@@ -38,9 +37,6 @@ BioProBench features:
 ## 🚀 Motivation
 
 Biological protocols are the operational blueprint for experiments. As biological research increasingly leverages automation and AI, the ability of AI systems to understand and reason about these complex procedures is paramount. Current LLMs, while powerful, face significant challenges:
-<div align="center">
-  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/figures/samples.jpg?raw=true" alt="BioProBench Logo" width="1000"/>
-</div>
 
 * Limited Procedural Understanding:
 * LLMs struggle with the temporal dependencies, conditional logic, and specific requirements embedded within protocols.
@@ -52,6 +48,10 @@ BioProBench addresses these challenges by providing the necessary data and tasks
 ---
 
 ## 📊 Dataset Structure
+
+<div align="center">
+  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/figures/samples.jpg?raw=true" alt="BioProBench Logo" width="1000"/>
+</div>
 
 BioProBench provides a layered data design to support various model development stages:
 
