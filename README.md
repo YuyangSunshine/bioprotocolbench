@@ -66,51 +66,97 @@ The dataset and code are publicly available:
 
 ---
 
-### 🧪 Evaluation Metrics
+## ✏️ Inference
+
+For researchers who wish to reproduce our results or test on models not covered in this paper, we provide an easy-to-use inference script in **Scripts/** directory.
+
+Researchers can choose to run inference tests using either the **API** or a **local model** (e.g., via Huggingface Transformers).
+
+#### Use API:
+
+```
+cd Scripts
+python generate_response.py
+```
+
+Before doing so, you need to modify the content of `generate_response.py` to specify your API key, model name, base URL, and other configuration details：
+```
+# ================================
+# User Configuration
+# ================================
+        
+API_KEY = 'YOUR API-KEY'       # Replace this with your API key
+BASE_URL = 'https://api.openai.com/v1'  # Replace with your base URL if different
+MODEL_NAME = 'o3-mini'              # Replace with your preferred model
+TASK_NAME = 'PQA'                   # Task name used in file paths ('PQA', 'ORD', 'ERR', 'REA-ERR', 'GEN', 'REA-GEN')
+```
+
+#### Use Local Models:
+
+```
+cd Scripts
+python generate_response_local.py
+```
+
+Before doing so, you need to modify the content of `generate_response_local.py` to specify your model name and other configuration details：
+```
+# ================================
+# User Configuration
+# ================================
+
+MODEL_NAME = 'meta-llama/Meta-Llama-3-8B-Instruct'                 # or other models from huggingface or local path
+TASK_NAME = 'PQA'                   # Task name used in file paths ('PQA', 'ORD', 'ERR', 'REA-ERR', 'GEN', 'REA-GEN')
+TEST_FILE_PATH = f"../Data/{TASK_NAME.split('-')[-1]}_test.json"
+```
+
+---
+
+## 🧪 Evaluation Metrics
 
 We employ a hybrid evaluation framework that combines standard NLP metrics with novel domain-specific measures to accurately quantify model performance across all tasks.
 
-Each task in BioProBench includes a standalone evaluation script within the **Metrics/** directory. To evaluate your model's outputs (Assert model's output is stored in 'generated_response' of each item of JSON file):
+Each task in BioProBench includes standalone evaluation codes within the **Metrics/** directory. To evaluate your model's outputs (Assert model's output is stored in 'generated_response' of each item of JSON file):
 
 #### ✅ Step 1: Locate the evaluation file
 
 Each task corresponds to one script:
 
-| Task                         | Script       | Metrics     |
+| Task                         | Codes       | Metrics     |
 | ---------------------------- | ------------ |------------ |
-| Protocol Generation (GEN)    | `GEN.py`     |BLEU, Keyword-based, Embedding-based, etc. |
-| Protocol QA (PQA)            | `PQA.py`     |Accuracy, Brier Score, etc. |
-| Error Correction (ERR)       | `ERR.py`     |Accuracy, Precision, Recall, F1, etc. |
-| Step Ordering (ORD)          | `ORD.py`     |Exact Match, Kendall's tau, etc. |
-| Experimental Reasoning (REA) | `REA-ERR.py` |Accuracy, Precision, Recall, F1, Consistency, etc. |
+| Protocol Generation (GEN)    | `./Metrics/GEN.py`     |BLEU, Keyword-based, Embedding-based, etc. |
+| Protocol QA (PQA)            | `./Metrics/PQA.py`     |Accuracy, Brier Score, etc. |
+| Error Correction (ERR)       | `./Metrics/ERR.py`     |Accuracy, Precision, Recall, F1, etc. |
+| Step Ordering (ORD)          | `./Metrics/ORD.py`     |Exact Match, Kendall's tau, etc. |
+| Experimental Reasoning (REA) | `./Metrics/REA-ERR.py` |Accuracy, Precision, Recall, F1, Consistency, etc. |
 
 
-#### ✏️ Step 2: Modify the script
+#### ✅ Step 2: Modify the script
 
-Open the corresponding evaluation script (e.g., `ERR.py`) and **manually set** the file path to your model’s output JSON file:
+Open the corresponding evaluation script (e.g., `ERR.py`) and **manually set** the file path to your model’s reponse:
 
 ```python
 # Inside ERR.py
 
 def main():
-    output_file_path = "/absolute/path/to/LLM_output_file.json"  # ← Replace this!
+    output_file_path = "/absolute/path/to/model_response.json"  # ← Replace this!
     ...
 ```
 
 Example:
 
 ```python
-output_file_path = "./ErrorCorrection_Benchmark_gpt-4o.json"
+output_file_path = "./ERR_test_o3-mini.json"
 ```
 
 Then run the script:
 
-```bash
+```
+cd Metrics
 python ERR.py
 ```
 
 
-#### 🧪 Output Metrics
+#### Output Metrics
 
 Each script prints evaluation results such as:
 
