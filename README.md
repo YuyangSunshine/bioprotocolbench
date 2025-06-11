@@ -6,7 +6,7 @@
 # BioProBench: Comprehensive Dataset and Benchmark in Biological Protocol Understanding and Reasoning
 
 [![ArXiv](https://img.shields.io/badge/ArXiv-paper-B31B1B.svg?logo=arXiv&logoColor=Red)](https://arxiv.org/pdf/2505.07889)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Dataset-FFD210.svg?logo=HuggingFace&logoColor=black)](https://huggingface.co/datasets/GreatCaptainNemo/BioProBench)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Dataset-FFD210.svg?logo=HuggingFace&logoColor=black)](https://huggingface.co/BioProBench)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/bioprotocolbench/pulls)
 
