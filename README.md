@@ -62,7 +62,7 @@ BioProBench provides a layered data design to support various model development 
 The dataset and code are publicly available:
 
 * **Code Repository:** [https://github.com/YuyangSunshine/bioprotocolbench](https://github.com/YuyangSunshine/bioprotocolbench/)
-* **Hugging Face Dataset:** [https://huggingface.co/datasets/GreatCaptainNemo/BioProBench](https://huggingface.co/BioProBench)
+* **Hugging Face Dataset:** [https://huggingface.co/BioProBench](https://huggingface.co/BioProBench)
 
 ---
 
