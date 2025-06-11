@@ -196,6 +196,14 @@ We welcome contributions to enhance BioProBench, including:
   url={https://arxiv.org/pdf/2505.07889}
 }
 ```
+---
+
+## 📝 More Research
+
+The following are two important works of our group:
+
+* **ChemCoTBench**: A step-by-step, application-oriented, and high-quality benchmark for evaluating LLM reasoning in chemical applications, click to view the [leaderboard](https://howardli1984.github.io/ChemCoTBench.github.io/#leaderboard)。
+* **ProLLaMA**: A multitask protein language model enhanced by the Evolutionary Protein Generation Framework (EPGF), the project code is on [GitHub](https://github.com/PKU-YuanGroup/ProLLaMA)。
 
 ---
 
