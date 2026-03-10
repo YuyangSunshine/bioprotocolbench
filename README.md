@@ -5,6 +5,10 @@
 
 # BioProBench: Comprehensive Dataset and Benchmark in Biological Protocol Understanding and Reasoning
 
+> **🌟 Part of the [BioProProject Series](https://yuyangsunshine.github.io/BioPro-Project/)**
+> 
+> Exploring the frontier of LLMs and AI Agents in biological protocol understanding, reasoning, and automated physical execution.
+
 [![ArXiv](https://img.shields.io/badge/ArXiv-paper-B31B1B.svg?logo=arXiv&logoColor=Red)](https://arxiv.org/pdf/2505.07889)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Dataset-FFD210.svg?logo=HuggingFace&logoColor=black)](https://huggingface.co/BioProBench)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
@@ -14,16 +18,17 @@
 
 ---
 
-Biological protocols are the fundamental bedrock of reproducible and safe life science research. While LLMs have shown remarkable capabilities on general tasks, their systematic evaluation on highly specialized, accuracy-critical, and inherently procedural texts like biological protocols remains limited. BioProBench fills this gap by providing a robust framework to evaluate LLMs on diverse aspects of protocol understanding and reasoning.
+## 📖 Overview
+
+Biological protocols are the fundamental bedrock of reproducible and safe life science research. While LLMs have shown remarkable capabilities on general tasks, their systematic evaluation on highly specialized, accuracy-critical, and inherently procedural texts like biological protocols remains limited. BioProBench fills this gap by providing a robust framework to evaluate LLMs on diverse aspects of protocol understanding and reasoning, serving as the foundational evaluation environment for downstream execution agents like our [BioProAgent](https://github.com/YuyangSunshine/bioproagent).
 
 <div align="center">
-  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/figures/overview.png?raw=true" alt="BioProBench Logo" width="1000"/>
+  <img src="https://github.com/YuyangSunshine/bioprotocolbench/blob/main/figures/overview.png?raw=true" alt="BioProBench Overview" width="1000"/>
 </div>
 
-BioProBench features:
+### ✨ Features
 * 📚 **Large-scale Data:** Built upon **27K original biological protocols**, yielding nearly **556K high-quality structured instances**.
-* 🎯 **Comprehensive Tasks:** A suite of ** five core tasks** challenging LLMs on different facets of procedural understanding and generation:
-
+* 🎯 **Comprehensive Tasks:** A suite of **five core tasks** challenging LLMs on different facets of procedural understanding and generation:
     * Protocol Question Answering (PQA)
     * Step Ordering (ORD)
     * Error Correction (ERR)
@@ -33,6 +38,7 @@ BioProBench features:
 * 🔬 **Standardized Evaluation:** A robust framework combining standard NLP metrics with novel domain-specific measures for accurate performance quantification.
   
 ---
+
 
 ## 🚀 Motivation
 
@@ -178,6 +184,18 @@ Overall, our findings underscore that robust procedural reasoning within biologi
 
 ---
 
+#### 🤖 Beyond Benchmarking: BioProAgent
+> 🎉 Accepted by ICLR 2026 LLA Workshop
+
+While BioProBench diagnoses the cognitive gaps of LLMs, wet-lab environments demand zero-defect physical execution where hallucinations can cause catastrophic equipment damage.
+
+To bridge the gap from computer simulation predictions to in vitro physical experiments, we introduce BioProAgent. Evaluated on the extended BioProBench, BioProAgent grounds probabilistic LLM reasoning within a deterministic Finite State Machine (FSM), enforcing a strict **"Design-Verify-Rectify"** workflow.
+
+It achieves **95.6%** physical compliance and an 88.7% success rate in error recovery, demonstrating that neuro-symbolic constraints are essential for reliable autonomy in irreversible physical environments.
+
+---
+
+
 ## 🤝 Contributing
 We welcome contributions to enhance BioProBench, including:
   - New protocol sources
@@ -188,12 +206,22 @@ We welcome contributions to enhance BioProBench, including:
 ---
 
 ## 📜 Citation
+
+If you find our benchmark or the overarching BioProProject useful, please consider citing our work:
+
 ```bibtex
-@misc{bioprotocolbench2025,
+@article{liu2025bioprobench,
   title={BioProBench: Comprehensive Dataset and Benchmark in Biological Protocol Understanding and Reasoning},
-  author={Yuyang Liu⋆, Liuzhenghao Lv⋆ Xiancheng Zhang, Li Yuan1, Yonghong Tian.},
-  year={2025},
-  url={https://arxiv.org/pdf/2505.07889}
+  author={Liu, Yuyang and Lv, Liuzhenghao and Zhang, Xiancheng and Yuan, Li and Tian, Yonghong},
+  journal={arXiv preprint arXiv:2505.07889},
+  year={2025}
+}
+
+@article{liu2026bioproagent,
+  title={BioProAgent: Neuro-Symbolic Grounding for Constrained Scientific Planning},
+  author={Liu, Yuyang and Wang, Jingya and Lv, Liuzhenghao and Tian, Yonghong},
+  journal={arXiv preprint arXiv:2603.00876},
+  year={2026}
 }
 ```
 ---
