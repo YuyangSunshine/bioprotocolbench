@@ -11,7 +11,7 @@
 
 [![ArXiv](https://img.shields.io/badge/ArXiv-paper-B31B1B.svg?logo=arXiv&logoColor=Red)](https://arxiv.org/pdf/2505.07889)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Dataset-FFD210.svg?logo=HuggingFace&logoColor=black)](https://huggingface.co/BioProBench)
-[![License: CC BY NC_4.0](https://img.shields.io/badge/License-CC_BY-NC_4.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc/4.0/)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/bioprotocolbench/pulls)
 
 **BioProBench is the first large-scale, integrated multi-task benchmark for biological protocol understanding and reasoning, specifically designed for large language models (LLMs). It moves beyond simple QA to encompass a comprehensive suite of tasks critical for procedural text comprehension.**
